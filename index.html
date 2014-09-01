@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>m.f.ellis</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,900|Roboto+Condensed:300italic,400italic,300,400' rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/mfellis.css">
+    <style>
+        h1, h2 {
+            font-family: "Helvetica Neue", "Roboto", sans-serif;
+            color: #ddd;
+            font-weight: 100;
+
+        }
+        h1 {
+            font-size: 5rem;
+            letter-spacing: 3px;
+            line-height: 3.7rem;
+            -webkit-transition: color .5s;
+            transition: color .5s;
+        }
+        h2 {
+            margin-top: 7px;
+            font-size: 2rem;
+            letter-spacing: 1px;
+            line-height: 1rem;
+            margin-left: 4px;
+        }
+        .bold {
+            font-weight: 700;
+            letter-spacing: -7px;
+            margin-left: -1px;
+        }
+        .pushed {
+            margin-left: 50%;
+        }
+        .center {
+            margin: 0 auto;
+            display: inline;
+        }
+        .logo {
+
+            text-decoration: none;
+            margin: 0;
+            display: inline-block;
+            /*cursor: pointer;*/
+        }
+        .logo:hover h1 {
+            color: #ccc;
+            /*-webkit-transform:;*/
+        }
+        .grey {
+            background-color: #ddd;
+        }
+        .first {
+        }
+        .menu {
+            text-decoration: none;
+            color: #ddd;
+            font-family: "Helvetica Neue";
+            font-weight:700;
+            font-size: 2rem;
+            display: block;
+        }
+        .menu:hover {
+            color: #ccc;
+        }
+        .icons {
+            position: relative;
+            left: 50%;
+            margin: 185px 0 30px -43px;
+        }
+        .social-link {
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 5px;
+        }
+/*        .social-link:first-child {
+            margin-left: 4px;
+        }*/
+        .ribbon {
+            /*width: 200%;*/
+            /*height: 225px;*/
+            margin-top: 125px;
+            /*border-top: 1px solid #ddd;*/
+            /*border-bottom: 1px solid #ddd;*/
+            /*overflow-x: scroll;*/
+            /*position: absolute;*/
+            display: block;
+        }
+        .module {
+            /*height: 225px;*/
+            display: inline-block;
+            width: 245px;
+            /*background-color: #ccc;*/
+            background-position: 20px 0 0 0;
+            margin: 0 1px;
+        }
+        .module::after {
+            content: ' ';
+            height: 50px;
+            position: absolute;
+            width: 245px;
+            background-color: #ddd;
+            transition: background-color .3s;
+        }
+        .module:hover::after {
+            background-color: #ccc;
+        }
+        .module h4 {
+            font-family: "Helvetica Neue";
+            font-weight: 100;
+            font-size: 1.4rem;
+            position: relative;
+            top: -1.4rem;
+            left: 5px;
+        }
+        .module img {
+            display: none;
+            max-width: 100%;
+            opacity: .6;
+            -webkit-transition: opacity .5s;
+        }
+        .module:hover img {
+            opacity: 1;
+        }
+        svg {
+            width: 26px;
+        }
+        svg .social {
+            fill: #ddd;
+            -webkit-transition: fill .5s;
+            transition: fill .5s;
+        }
+        svg:hover .social {
+            fill: #ccc;
+        }
+        .contact-card {
+            display: none;
+            padding: 10px;
+            font-family: "Helvetica Neue";
+            color: black;
+            font-weight: 100;
+        }
+        .contact-card span, .contact-card a {
+            display: block;
+        }
+    </style>
+
+    </head>
+
+    <body>
+        <div class="full col first">
+            <a href="/index.html" class="logo">
+                <h1 class="bold">MARK</h1>
+                <h1>FRANCIS</h1>
+                <h1>ELLIS</h1>
+                <h2>software developer &&</h2>
+                <h2>web designer</h2>
+            </a>
+        </div>
+        <div class="ribbon full col clearfix">
+            <div class="left module">
+                <h4>projects</h4>
+                <img src="img/code.jpg">
+            </div>
+            <div class="left module">
+                <h4>method</h4>
+                <img src="img/method.jpg">
+            </div>
+            <div class="left module">
+                <h4>summary</h4>
+                <img src="img/js-logo.png">
+            </div>
+            <div class="left module">
+                <h4>about</h4>
+                <img src="img/sxsw2.jpg">
+            </div>
+            <div class="left module contact">
+                <h4>contact</h4>
+                <div class="contact-card">
+                    <span>Email me.</span>
+                    <a href="mailto">ellismarkf@gmail.com</a>
+                    <br>
+                    <span>Call me.</span>
+                    <a href="">281.885.9345</a>
+                </div>
+            </div>
+        </div>
+        <div class="icons">
+            <a class="social-link" href="https://github.com/ellismarkf" target="_blank">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="193 0 575.7 560" enable-background="new 193 0 575.7 560" xml:space="preserve">
+                <path class="social" fill="#DDDDDD" d="M480,0C321.5,0,193,128.6,193,287c0,126.8,82.8,234.2,195.5,273c14.1,1.8,19.4-7,19.4-14.1s0-24.7,0-49.3
+                    c-79.2,17.6-96.9-38.7-96.9-38.7c-12.3-33.5-31.7-42.3-31.7-42.3C252.8,398,281,398,281,398c28.2,1.8,44,29.9,44,29.9
+                    c26.4,44,66.9,31.7,82.8,24.7c1.8-19.4,10.6-31.7,17.6-38.7c-63.4-7-130.3-31.7-130.3-142.6c0-31.7,10.6-56.4,29.9-77.5
+                    c-1.8-5.3-12.3-35.2,3.5-74c0,0,24.7-7,79.2,29.9c22.9-7,47.5-8.8,72.2-8.8c24.7,0,49.3,3.5,72.2,8.8c54.6-37,79.2-29.9,79.2-29.9
+                    c15.8,38.7,5.3,68.7,3.5,75.7c17.6,19.4,29.9,45.8,29.9,77.5c0,110.9-66.9,133.8-130.3,140.9c10.6,8.8,19.4,26.4,19.4,52.8
+                    c0,38.7,0,68.7,0,79.2c0,7,5.3,15.8,19.4,14.1c114.5-38.7,195.5-146.2,195.5-273C767,128.6,638.5,0,480,0z"/>
+                </svg>
+            </a>
+            <a class="social-link" href="https://twitter.com/mf_ellis" target="_blank">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 273.4 222.2" enable-background="new 0 0 273.4 222.2" xml:space="preserve">
+                <path class="social" fill="#DDDDDD" d="M273.4,26.3c-10.1,4.5-20.9,7.5-32.2,8.8c11.6-6.9,20.5-17.9,24.7-31C255,10.5,243,15.2,230.2,17.7
+                    C220,6.8,205.4,0,189.3,0c-31,0-56.1,25.1-56.1,56.1c0,4.4,0.5,8.7,1.5,12.8C88,66.5,46.7,44.2,19,10.3c-4.8,8.3-7.6,17.9-7.6,28.2
+                    c0,19.5,9.9,36.6,25,46.7c-9.2-0.3-17.8-2.8-25.4-7c0,0.2,0,0.5,0,0.7c0,27.2,19.3,49.8,45,55c-4.7,1.3-9.7,2-14.8,2
+                    c-3.6,0-7.1-0.4-10.6-1c7.1,22.3,27.9,38.5,52.4,39c-19.2,15-43.4,24-69.7,24c-4.5,0-9-0.3-13.4-0.8c24.8,15.9,54.3,25.2,86,25.2
+                    c103.2,0,159.6-85.5,159.6-159.6c0-2.4-0.1-4.9-0.2-7.3C256.4,47.4,265.9,37.5,273.4,26.3z"/>
+                </svg>
+            </a>
+            <a class="social-link" href="https://www.linkedin.com/profile/view?id=76763263&trk=nav_responsive_tab_profile" target="_blank">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve">
+                <g>
+                    <g>
+                        <g>
+                            <path class="social" fill="#DDDDDD" d="M200,0H15.9C7.1,0,0,7,0,15.6v184.9C0,209,7.1,216,15.9,216H200c8.8,0,16-7,16-15.6V15.6
+                                C216,7,208.8,0,200,0z"/>
+                            <path fill="#FFFFFF" d="M32,81h32.1v103.1H32V81z M48,29.7c10.2,0,18.6,8.3,18.6,18.6c0,10.3-8.3,18.6-18.6,18.6
+                                c-10.3,0-18.6-8.3-18.6-18.6C29.5,38.1,37.8,29.7,48,29.7"/>
+                            <path fill="#FFFFFF" d="M84.2,81h30.7v14.1h0.4c4.3-8.1,14.7-16.6,30.3-16.6c32.4,0,38.4,21.3,38.4,49.1v56.5h-32v-50.1
+                                c0-12-0.2-27.3-16.7-27.3c-16.7,0-19.2,13-19.2,26.5v51h-32V81z"/>
+                        </g>
+                    </g>
+                </g>
+                </svg>
+            </a>
+        </div>
+    </body>
+    <script type="text/javascript">
+        // var contact = document.getElementsByClassName('contact')[0];
+        // contact.addEventListener('mouseover', function(e){
+        //     var contactCard = document.getElementsByClassName('contact-card')[0];
+        //     $(contactCard).stop(true,true).slideDown();
+        // });
+        // contact.addEventListener('mouseleave', function(e){
+        //     var contactCard = document.getElementsByClassName('contact-card')[0];
+        //     $(contactCard).stop(true,true).slideUp();
+        // });
+
+        $(".contact").hover(function(){
+            $(".contact-card").stop(true, true).slideDown();
+        }, function(){
+            $(".contact-card").stop(true, true).slideUp();
+        });
+    </script>
+</html>
