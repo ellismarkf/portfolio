@@ -7,146 +7,10 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,900|Roboto+Condensed:300italic,400italic,300,400' rel="stylesheet" type="text/css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/mfellis.css">
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/trianglify/0.1.3/trianglify.min.js"></script>
     <style>
-        h1, h2 {
-            font-family: "Helvetica Neue", "Roboto", sans-serif;
-            color: #ddd;
-            font-weight: 100;
 
-        }
-        h1 {
-            font-size: 5rem;
-            letter-spacing: 3px;
-            line-height: 3.7rem;
-            -webkit-transition: color .5s;
-            transition: color .5s;
-        }
-        h2 {
-            margin-top: 7px;
-            font-size: 2rem;
-            letter-spacing: 1px;
-            line-height: 1rem;
-            margin-left: 4px;
-        }
-        .bold {
-            font-weight: 700;
-            letter-spacing: -7px;
-            margin-left: -1px;
-        }
-        .pushed {
-            margin-left: 50%;
-        }
-        .center {
-            margin: 0 auto;
-            display: inline;
-        }
-        .logo {
-
-            text-decoration: none;
-            margin: 0;
-            display: inline-block;
-            /*cursor: pointer;*/
-        }
-        .logo:hover h1 {
-            color: #ccc;
-            /*-webkit-transform:;*/
-        }
-        .grey {
-            background-color: #ddd;
-        }
-        .first {
-        }
-        .menu {
-            text-decoration: none;
-            color: #ddd;
-            font-family: "Helvetica Neue";
-            font-weight:700;
-            font-size: 2rem;
-            display: block;
-        }
-        .menu:hover {
-            color: #ccc;
-        }
-        .icons {
-            position: relative;
-            left: 50%;
-            margin: 185px 0 30px -43px;
-        }
-        .social-link {
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 5px;
-        }
-/*        .social-link:first-child {
-            margin-left: 4px;
-        }*/
-        .ribbon {
-            /*width: 200%;*/
-            /*height: 225px;*/
-            margin-top: 125px;
-            /*border-top: 1px solid #ddd;*/
-            /*border-bottom: 1px solid #ddd;*/
-            /*overflow-x: scroll;*/
-            /*position: absolute;*/
-            display: block;
-        }
-        .module {
-            /*height: 225px;*/
-            display: inline-block;
-            width: 245px;
-            /*background-color: #ccc;*/
-            background-position: 20px 0 0 0;
-            margin: 0 1px;
-        }
-        .module::after {
-            content: ' ';
-            height: 50px;
-            position: absolute;
-            width: 245px;
-            background-color: #ddd;
-            transition: background-color .3s;
-        }
-        .module:hover::after {
-            background-color: #ccc;
-        }
-        .module h4 {
-            font-family: "Helvetica Neue";
-            font-weight: 100;
-            font-size: 1.4rem;
-            position: relative;
-            top: -1.4rem;
-            left: 5px;
-        }
-        .module img {
-            display: none;
-            max-width: 100%;
-            opacity: .6;
-            -webkit-transition: opacity .5s;
-        }
-        .module:hover img {
-            opacity: 1;
-        }
-        svg {
-            width: 26px;
-        }
-        svg .social {
-            fill: #ddd;
-            -webkit-transition: fill .5s;
-            transition: fill .5s;
-        }
-        svg:hover .social {
-            fill: #ccc;
-        }
-        .contact-card {
-            display: none;
-            padding: 10px;
-            font-family: "Helvetica Neue";
-            color: black;
-            font-weight: 100;
-        }
-        .contact-card span, .contact-card a {
-            display: block;
-        }
     </style>
 
     </head>
@@ -161,7 +25,7 @@
                 <h2>web designer</h2>
             </a>
         </div>
-        <div class="ribbon full col clearfix">
+<!--         <div class="ribbon full col clearfix">
             <div class="left module">
                 <h4>projects</h4>
                 <img src="img/code.jpg">
@@ -188,6 +52,34 @@
                     <a href="">281.885.9345</a>
                 </div>
             </div>
+        </div> -->
+        <div class="full white">
+            <section class="three-q col">
+                <hr class="separator">
+                <h2>projects</h2>
+                <p>Lorem ipsum</p>
+            </section>
+        </div>
+        <div class="full white">
+            <section class="three-q col">
+                <hr class="separator">
+                <h2>method</h2>
+                <p>Lorem ipsum</p>
+            </section>
+        </div>
+        <div class="full white">
+            <section class="three-q col">
+                <hr class="separator">
+                <h2>about</h2>
+                <p>Lorem ipsum</p>
+            </section>
+        </div>
+        <div class="full white">
+            <section class="three-q col">
+                <hr class="separator">
+                <h2>contact</h2>
+                <p>Lorem ipsum</p>
+            </section>
         </div>
         <div class="icons">
             <a class="social-link" href="https://github.com/ellismarkf" target="_blank">
@@ -244,7 +136,45 @@
         $(".contact").hover(function(){
             $(".contact-card").stop(true, true).slideDown();
         }, function(){
-            $(".contact-card").stop(true, true).slideUp();
+            $(".contact-card").slideUp(function(){
+                $(this).stop(true, true)
+            });
         });
+
+        var first = document.getElementsByClassName("first")[0];
+
+        var t = new Trianglify({noiseIntensity: 0});
+        var pattern = t.generate(document.body.clientWidth, document.body.clientHeight);
+        first.setAttribute('style', 'background-image: '+pattern.dataUrl);
+
+        function height() {
+                    return Math.max(
+                        document.body.scrollHeight, document.documentElement.scrollHeight,
+                        document.body.offsetHeight, document.documentElement.offsetHeight,
+                        document.body.clientHeight, document.documentElement.clientHeight
+                    );
+                }
+
+
+        window.onresize = function() {
+                  redraw();
+              };
+
+        //       function heightChange() {
+        //           if (height() != prevheight) {
+        //               console.log("height changed from "+prevheight+" to "+height());
+        //               prevheight = height();
+        //               redraw();
+        //           };
+        //       }
+
+        //       redraw();
+
+              function redraw() {
+                  console.log("drawing "+document.body.clientWidth+"x"+height())
+                  var pattern = t.generate(document.body.clientWidth, height());
+                  first.setAttribute('style', 'background-image: ' + pattern.dataUrl);
+              };
+
     </script>
 </html>

@@ -105,7 +105,159 @@ table {
 .full {
   width: 100%;
 }
+.white {
+  background-color: #fff;
+}
+
+.separator {
+  border: none;
+  height: 1px;
+  margin: 50px 0;
+  background: #ccc;
+}
+.first h2:last-child {
+  margin-bottom: 30px;
+}
+h1, h2 {
+  font-family: "Helvetica Neue", "Roboto", sans-serif;
+  color: #fff;
+  font-weight: 100;
+}
+h1 {
+  font-size: 5rem;
+  letter-spacing: 3px;
+  line-height: 3.7rem;
+  -webkit-transition: color .5s;
+  transition: color .5s;
+}
+h2 {
+  margin: 20px 0 20px 4px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  line-height: .3rem;
+}
+.bold {
+  font-weight: 700;
+  letter-spacing: -7px;
+  margin-left: -1px;
+}
+.pushed {
+  margin-left: 50%;
+}
+.center {
+  margin: 0 auto;
+  display: inline;
+}
+.logo {
+  text-decoration: none;
+  margin: 0;
+  display: inline-block;
+  /*cursor: pointer;*/
+}
+.logo:hover h1 {
+  color: #ccc;
+  /*-webkit-transform:;*/
+}
 .grey {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dedede), color-stop(100%,#d4d4d4)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #dedede 0%,#d4d4d4 100%); /* Chrome10+,Safari5.1+ */
+  background-color: #ddd;
+}
+.first {
+}
+.menu {
+  text-decoration: none;
+  color: #ddd;
+  font-family: "Helvetica Neue";
+  font-weight:700;
+  font-size: 2rem;
+  display: block;
+}
+.menu:hover {
+  color: #ccc;
+}
+.icons {
+  position: relative;
+  left: 50%;
+  margin: 185px 0 30px -43px;
+}
+.social-link {
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.ribbon {
+  /*width: 200%;*/
+  /*height: 225px;*/
+  margin-top: 125px;
+  /*border-top: 1px solid #ddd;*/
+  /*border-bottom: 1px solid #ddd;*/
+  /*overflow-x: scroll;*/
+  /*position: absolute;*/
+  display: block;
+}
+.module {
+  /*height: 225px;*/
+  display: inline-block;
+  width: 245px;
+  /*background-color: #ccc;*/
+  background-position: 20px 0 0 0;
+  margin: 0 1px;
+}
+.module::after {
+  content: ' ';
+  height: 50px;
+  position: absolute;
+  width: 245px;
+  background-color: #ddd;
+  transition: background-color .3s;
+}
+.module:hover::after {
+  background-color: #ccc;
+}
+.module h4 {
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  font-size: 1.4rem;
+  position: relative;
+  top: -1.4rem;
+  left: 5px;
+}
+.module img {
+  display: none;
+  max-width: 100%;
+  opacity: .6;
+  -webkit-transition: opacity .5s;
+}
+.module:hover img {
+  opacity: 1;
+}
+svg {
+  width: 26px;
+}
+svg .social {
+  fill: #ddd;
+  -webkit-transition: fill .5s;
+  transition: fill .5s;
+}
+svg:hover .social {
+  fill: #ccc;
+}
+.contact-card {
+  display: none;
+  padding: 10px;
+  font-family: "Helvetica Neue";
+  color: black;
+  font-weight: 100;
+}
+.contact-card span, .contact-card a {
+  display: block;
+}
+section h2 {
+
+  margin-bottom: 20px;
+}
+section p {
+  font-family: "Helvetica Neue";
+  font-size: 1rem;
+  font-weight: 100;
 }
