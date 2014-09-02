@@ -84,6 +84,9 @@ table {
 .sixth {
   width: 16.677777777777%;
 }
+.fifth {
+  width: 20%;
+}
 .quarter {
   width: 25%;
 }
@@ -108,11 +111,31 @@ table {
 .white {
   background-color: #fff;
 }
+.ghost {
+  background-color: rgba(255,255,255,.5);
+}
+.nav-btn a {
+  text-decoration: none;
+  font-family: "Helvetica Neue", sans-serif;
+  color: #aaa;
+  font-size: .8rem;
+  font-weight: 100;
+  text-align: center;
+  display: block;
+  height: 25px;
+  line-height: 25px;
+}
+.nav-btn a:hover {
+  color: black;
+}
+.nav-btn.current a {
+  color: black;
+}
 
 .separator {
   border: none;
   height: 1px;
-  margin: 50px 0;
+  margin: 300px 0;
   background: #ccc;
 }
 .first h2:last-child {
@@ -148,20 +171,88 @@ h2 {
   margin: 0 auto;
   display: inline;
 }
-.logo {
-  text-decoration: none;
-  margin: 0;
+.mark {
+  position: absolute;
+  right: 3%;
+  bottom: 3%;
   display: inline-block;
-  /*cursor: pointer;*/
+  cursor: pointer;
+}
+a.logo {
+  text-decoration: none;
 }
 .logo:hover h1 {
-  color: #ccc;
+  color: #aaa;
   /*-webkit-transform:;*/
+}
+.icons {
+margin: 0 0 5px 3px;
+}
+svg {
+  width: 22px;
+  margin-right: 3px;
+}
+svg .social {
+  fill: #FFF;
+  -webkit-transition: fill .5s;
+  transition: fill .5s;
+}
+svg:hover .social {
+  fill: #ccc;
+}
+svg .transparent {
+  fill: rgba(255, 255, 255, 0);
+}
+.side-note {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Garamond", serif;
+  font-size: 3rem;
+  cursor: pointer;
+}
+.nav-box:last-child {
+  border-right: 1px solid #ccc;
+}
+.nav-box {
+  color: #ccc;
+  font-size: 1.6rem;
+  /*border-top: 20px solid #fff;*/
+  text-align: right;
+  vertical-align: middle;
+  padding: 10px 30px 0 0;
+  background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 75%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(75%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 75%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 75%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 75%); /* IE10+ */
+  background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 75%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+
+}
+.nav-box h2 {
+  color: #ccc;
+}
+.inverse {
+  background: -moz-linear-gradient(left,  rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(75%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 75%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  rgba(255,255,255,1) 75%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  rgba(255,255,255,1) 75%,rgba(255,255,255,0) 100%); /* IE10+ */
+  background: linear-gradient(to right,  rgba(255,255,255,1) 75%,rgba(255,255,255,0) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+  color: white;
+}
+.inverse h2 {
+  color: white;
+}
+.content {
+  height: 400px;
 }
 .grey {
   background-color: #ddd;
-}
-.first {
 }
 .menu {
   text-decoration: none;
@@ -173,11 +264,6 @@ h2 {
 }
 .menu:hover {
   color: #ccc;
-}
-.icons {
-  position: relative;
-  left: 50%;
-  margin: 185px 0 30px -43px;
 }
 .social-link {
   text-decoration: none;
@@ -231,17 +317,6 @@ h2 {
 .module:hover img {
   opacity: 1;
 }
-svg {
-  width: 26px;
-}
-svg .social {
-  fill: #ddd;
-  -webkit-transition: fill .5s;
-  transition: fill .5s;
-}
-svg:hover .social {
-  fill: #ccc;
-}
 .contact-card {
   display: none;
   padding: 10px;
@@ -252,12 +327,16 @@ svg:hover .social {
 .contact-card span, .contact-card a {
   display: block;
 }
-section h2 {
-
+/*section h2 {
+  color: #ccc;
+  font-size: 1.6rem;
   margin-bottom: 20px;
-}
+}*/
 section p {
   font-family: "Helvetica Neue";
   font-size: 1rem;
   font-weight: 100;
 }
+/*section:last-child {
+  margin-bottom: 30px;
+}*/
