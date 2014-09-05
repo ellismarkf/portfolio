@@ -113,16 +113,20 @@ table {
   width: 100%;
 }
 .white {
-  background-color: #fff;
+  background-color: white;
+}
+.t-padded {
+  padding-top: 50px;
 }
 .ghost {
+  z-index: 100;
   background-color: rgba(255,255,255,.5);
 }
 .nav-btn a {
   text-decoration: none;
-  font-family: "Helvetica Neue", sans-serif;
-  color: #aaa;
-  font-size: .8rem;
+  font-family: "Helvetica Neue", "pragmatica-web", sans-serif;
+  color: #a0a0a0;
+  font-size: .9rem;
   font-weight: 100;
   text-align: center;
   display: block;
@@ -130,13 +134,16 @@ table {
   line-height: 25px;
 }
 .nav-btn a:hover, .nav-btn.current a {
-  color: #a0a0a0;
-  text-shadow: 0 0 1px #ccc;
+  color: #000;
+  text-shadow: 0 0 1px rgba(0,0,0,.5);
 }
 .highlighted {
   box-shadow: 0 0 5px #ccc;
 }
-
+.middle {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
 .separator {
   border: none;
   height: 1px;
@@ -146,25 +153,26 @@ table {
 .first h2:last-child {
   margin-bottom: 30px;
 }
-h1, h2 {
-  font-family: "Helvetica Neue", "Roboto", sans-serif;
+a.logo h1, h2 {
+  font-family: "Helvetica Neue", "pragmatica-web", sans-serif;
   color: #fff;
   font-weight: 100;
 }
-h1 {
+a.logo h1 {
   font-size: 5rem;
   letter-spacing: 3px;
   line-height: 3.7rem;
   -webkit-transition: color .5s;
   transition: color .5s;
 }
-h2 {
+a.logo h2 {
   margin: 20px 0 20px 4px;
   font-size: 2rem;
   letter-spacing: 1px;
   line-height: .3rem;
 }
-.bold {
+a.logo .bold {
+  font-family: "Helvetica Neue", "pragmatica-web", sans-serif;
   font-weight: 700;
   letter-spacing: -7px;
   margin-left: -1px;
@@ -190,6 +198,7 @@ a.logo {
   color: #ddd;
   /*-webkit-transform:;*/
 }
+
 .icons {
 margin: 0 0 5px 3px;
 }
@@ -216,10 +225,10 @@ svg .transparent {
 .side-note {
   position: absolute;
   right: 12px;
-  top: 10px;
+  top: 30px;
   text-decoration: none;
   color: #fff;
-  font-family: "Garamond", serif;
+  font-family: "Garamond", serif, sans-serif;
   font-size: 3rem;
   cursor: pointer;
 }
@@ -228,7 +237,7 @@ svg .transparent {
 }
 .nav-box {
   color: #bbb;
-  background-color: white;
+  /*background-color: white;*/
   font-size: 1.6rem;
   text-align: right;
   vertical-align: middle;
@@ -236,6 +245,9 @@ svg .transparent {
 }
 .nav-box h2 {
   color: #aaa;
+}
+#about {
+  border-top: 1px solid rgba(0,0,0,.1);
 }
 .divider {
   width: 230px;
@@ -248,14 +260,33 @@ svg .transparent {
   height: 1px;
   box-shadow: 0 2px 5px #ccc;
 }
-.content {
-
+.content p, .container p, .container span {
+  color: #aaa;
+  line-height: 1.15rem;
+}
+.three-q p {
+  margin-bottom: 30px;
+}
+.container {
+  margin-top: 30px;
+}
+.content h3 {
+  font-family: "Helvetica Neue", "pragmatica-web", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: #aaa;
 }
 .content img {
-  width: 200px
+  width: 100%;
+  margin: 0 auto;
+}
+.content h2 {
+  color: #aaa;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 .grey {
-  background-color: #fcfcfc;
+  background-color: rgb(254,253,254);
 }
 .grey h2 {
   color: #aaa;
@@ -263,7 +294,7 @@ svg .transparent {
 .menu {
   text-decoration: none;
   color: #ddd;
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", "pragmatica-web", sans-serif;
   font-weight:700;
   font-size: 2rem;
   display: block;
@@ -272,7 +303,7 @@ svg .transparent {
   color: #ccc;
 }
 section p {
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", "pragmatica-web", sans-serif;
   font-size: 1rem;
   font-weight: 100;
 }
@@ -282,7 +313,7 @@ section p {
 }
 .colophon {
   color: white;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Helvetica Neue", "pragmatica-web", sans-serif;
   font-weight: 100;
   font-size: .8rem;
   text-align: center;
@@ -314,21 +345,94 @@ svg {
 }
 .module {
   height: 250px;
+  width: 300px;
   outline: 1px solid #ccc;
+}
+.module img {
+  width: 100%;
+  opacity: .6;
+  -webkit-transition: opacity .4s;
 }
 .description {
   position: relative;
   padding: 2rem 2% 2% 2%;
+  width: 50%;
 }
 .description h2 {
-  color: black;
+  color: #aaa;
   margin-left: none;
+  font-size: 1.2rem;
+  -webkit-transition: color .4s;
 }
-.description h2 + p {
+.description p {
+  color: #aaa;
+  line-height: 1.2rem;
+  -webkit-transition: color .4s;
+}
+/*.description h2 + p {
   border-top: 1px solid #ccc;
   padding-top: 1rem;
-}
+}*/
 .description p strong {
   font-size: .8rem;
   font-weight: 500;
+}
+.description:last-child {
+  margin-bottom: 20px;
+}
+.test {
+  height: 400px;
+}
+.row hr, .content hr {
+  border: none;
+  background: #ccc;
+  margin: 10px 0;
+  height: 1px;
+}
+.row:hover p, .row:hover h2 {
+  color: #000;
+}
+.row:hover img {
+  opacity: 1;
+}
+@media screen and (max-width: 768px) {
+  a.logo h1 {
+    font-size: 4rem;
+    letter-spacing: 1.5px;
+    line-height: 3rem;
+    text-align: right;
+  }
+  a.logo h2 {
+    text-align: right;
+    font-size: 1.6rem;
+  }
+  a.logo .bold {
+    margin-left: 0;
+    margin-right: 11px;
+  }
+  .icons {
+    position: relative;
+    left: 170px;
+  }
+  .description {
+    width: 100%;
+  }
+}
+#svg {
+  height: 300px;
+  width: 100%;
+  border: 1px solid #ccc;
+  position: relative;
+  left: 20%;
+}
+.get {
+    display:none;
+}
+ 
+#diagram {
+    position: relative;
+    height: 300px;
+}
+.last {
+  margin-bottom: 30px;
 }
