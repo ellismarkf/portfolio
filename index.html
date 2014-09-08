@@ -27,7 +27,7 @@
                         <a href="#home">home</a>
                     </li>
                     <li class="fifth left nav-btn">
-                        <a href="#about">me</a>
+                        <a id="me-btn" href="#about">me</a>
                     </li>
                     <li class="fifth left nav-btn">
                         <a href="#projects">projects</a>
@@ -42,8 +42,30 @@
             </div>
         </nav>
         <div id="home" class="full first">
-            <a class="side-note">*</a>
-            <div class="mark">
+            <a class="side-note">
+                <object>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+                        <path fill="#FFFFFF" d="M98,49.1c-0.1-7.7-2.1-15.3-5.8-22l-16.9,9.8c2,3.7,3.1,7.9,3.2,12.2C78.4,49.1,98,49.1,98,49.1z"/>
+                        <path fill="#FFFFFF" d="M51.2,2.4V22c4.2,0.1,8.3,1.2,12,3.1L73,8.1C66.4,4.5,58.8,2.5,51.2,2.4z"/>
+                        <path fill="#FFFFFF" d="M49,22V2.4c-7.6,0.2-15,2.3-21.6,5.9l9.8,16.9C40.8,23.3,44.9,22.2,49,22z"/>
+                        <path fill="#FFFFFF" d="M74.1,35L91,25.2c-4-6.5-9.5-12-16.1-16l-9.8,16.9C68.8,28.4,71.8,31.4,74.1,35z"/>
+                        <path fill="#FFFFFF" d="M8.6,27.2c-3.6,6.5-5.6,13.9-5.8,21.4h19.6c0.2-4.1,1.3-8,3.2-11.6L8.6,27.2z"/>
+                        <path fill="#FFFFFF" d="M26.4,64.4L9.5,74.2c3.8,6.4,9.2,11.9,15.5,15.9l9.8-17C31.4,70.9,28.5,67.9,26.4,64.4z"/>
+                        <path fill="#FFFFFF" d="M2.8,50.8c0.1,7.5,2,14.9,5.5,21.5l17-9.8c-1.8-3.6-2.8-7.6-2.9-11.7C22.4,50.8,2.8,50.8,2.8,50.8z"/>
+                        <path fill="#FFFFFF" d="M48.4,97.5V77.9c-4.1-0.3-8.1-1.5-11.7-3.5l-9.8,16.9C33.4,95.1,40.8,97.2,48.4,97.5z"/>
+                        <path fill="#FFFFFF" d="M50.6,78v19.5c7.6,0,15.1-1.9,21.9-5.4l-9.8-17C58.9,77,54.9,78,50.6,78z"/>
+                        <path fill="#FFFFFF" d="M91.9,73.3c3.8-6.7,5.8-14.2,6.1-21.9H78.4c-0.2,4.2-1.4,8.4-3.4,12.1L91.9,73.3z"/>
+                        <path fill="#FFFFFF" d="M74.5,91c6.6-3.9,12.2-9.3,16.2-15.8l-17-9.8c-2.3,3.5-5.5,6.5-9.1,8.6L74.5,91z"/>
+                        <path fill="#FFFFFF" d="M25.5,9.5c-6.4,3.9-11.8,9.4-15.7,15.8L26.7,35c2.2-3.4,5.1-6.4,8.5-8.6L25.5,9.5z"/>
+                        <path fill="#FFFFFF" d="M64.4,36.5c-1-1-2.6-1-3.6,0l-6.7,6.7l-1.2-1.2l-2.1,2.1l1.1,1.1c0,0,0,0,0,0L36.4,60.6
+                            c-0.6,0.6-0.9,1.4-0.8,2.2l-1.2,1.8l1.9,1.9l1.8-1.2c0.8,0.1,1.6-0.2,2.2-0.8l15.4-15.4c0,0,0,0,0,0l1.1,1.1l2.1-2.1l-1.2-1.2
+                            l6.7-6.7C65.4,39.1,65.4,37.5,64.4,36.5z M55.1,48.5L39.7,63.9c-0.4,0.4-1.1,0.6-1.7,0.5l-0.2,0l-1.5,1l-1-1l1-1.5l0-0.2
+                            c-0.1-0.6,0.1-1.3,0.5-1.7l15.4-15.4c0,0,0,0,0,0L55.1,48.5C55.1,48.5,55.1,48.5,55.1,48.5z"/>
+                    </svg>
+                </object>
+            </a>
+            <div class="mark fadeIn animated">
                 <div class="icons">
                     <a class="social-link" href="https://github.com/ellismarkf" target="_blank">
                         <object>
@@ -105,54 +127,16 @@
                         <h2>I'm a solution-first, language-second* design thinker.</h2>
                         <p>*but I'm pretty fond of Javascript and Ruby</p>
                         <div class="clearfix">
-                            <div class="half col left" data-text="about">
-                                <p>I recently graduated from <a href="http://www.makersquare.com">MakerSquare</a>
-                                , an immersive 12-week software development bootcamp in Austin, TX, where I learned
+                            <div class="fluid-half col" data-fluid="true">
+                                <p>I recently graduated from <a href="http://www.makersquare.com">MakerSquare</a>, an immersive 12-week software development bootcamp in Austin, TX, where I learned
                                 core software engineering principles and a host of necessary skills to build testable,
                                 scalable, modular applications for the web.</p>
                                 <p>I learn quickly, think analytically, and I favor the right tool over the popular one.
                                 Other interests include horror films, craft beer, composing music, writing fiction, and finding the place where form meets function.</p>
                                 <h3>That's what I'm about.</h3>
                             </div>
-                            <div class="half col left">
-                                <div id="diagram"></div>
-                                <div class="get">
-                                    <div class="arc">
-                                        <span class="text">jQuery</span>
-                                        <input type="hidden" class="percent" value="95" />
-                                        <input type="hidden" class="color" value="#97BE0D" />
-                                    </div>
-                                    <div class="arc">
-                                 
-                                        <span class="text">CSS3</span>
-                                        <input type="hidden" class="percent" value="90" />
-                                        <input type="hidden" class="color" value="#D84F5F" />
-                                    </div>
-                                    <div class="arc">
-                                        <span class="text">HTML5</span>
-                                        <input type="hidden" class="percent" value="80" />
-                                        <input type="hidden" class="color" value="#88B8E6" />
-                                 
-                                    </div>
-                                    <div class="arc">
-                                        <span class="text">PHP</span>
-                                        <input type="hidden" class="percent" value="53" />
-                                        <input type="hidden" class="color" value="#BEDBE9" />
-                                    </div>
-                                    <div class="arc">
-                                        <span class="text">MySQL</span>
-                                        <input type="hidden" class="percent" value="45" />
-                                        <input type="hidden" class="color" value="#EDEBEE" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clearfix container last">
-                            <div class="third col left">
-                                <p>some stuff about my skills</p>
-                            </div>
-                            <div class="two-thirds col left">
-                                <p>some stuff about my skills</p>
+                            <div class="fluid-half" data-fluid="true">
+                                <img src="img/sxsw3.png" class="me">
                             </div>
                         </div>
                     </div>
@@ -167,7 +151,7 @@
                 </section>
                 <section class="full grey content">
                 <div class="five-sixth col clearfix module-container">
-                    <a href="http://development.vulture.divshot.io" target="_blank">
+                    <a href="http://development.vulture.divshot.io" target="_blank" class="prj-link">
                        <div class="full row clearfix">
                            <div class="module half col left">
                                <img src="img/lark.png">
@@ -183,19 +167,21 @@
                            </div>
                        </div> 
                     </a>
-                   <div class="full row clearfix">
-                       <div class="module half col left">
-                           <img src="img/t.png">
+                    <a href="http://transliteratr.herokuapp.com/" target="_blank" class="prj-link">
+                       <div class="full row clearfix">
+                           <div class="module half col left">
+                               <img src="img/t.png">
+                           </div>
+                           <div class="col left description">
+                               <h2>Transliteratr</h2>
+                               <hr>
+                               <p>An experiment in new visual languages. "Translates" inputted text (poems,
+                               quotes, exerpts from novels, etc) into mosaics of randomly generated colors.</p><br>
+                               <p><strong>TECHNOLOGIES:</strong> html, sass, sinatra, ruby, yaml, erb</p>
+                           </div>
                        </div>
-                       <div class="col left description">
-                           <h2>Transliteratr</h2>
-                           <hr>
-                           <p>An experiment in new visual languages. "Translates" inputted text (poems,
-                           quotes, exerpts from novels, etc) into mosaics of randomly generated colors.</p><br>
-                           <p><strong>TECHNOLOGIES:</strong> html, sass, sinatra, ruby, yaml, erb</p>
-                       </div>
-                   </div>
-                   <a href="http://www.traintrifecta.com" target="_blank">
+                    </a>
+                   <a href="http://www.traintrifecta.com" target="_blank" class="prj-link">
                        <div class="full row clearfix">
                            <div class="module half col left">
                                <img src="img/train.png">
@@ -210,7 +196,7 @@
                            </div>
                        </div>
                    </a>
-                   <a href="http://www.carltechusa.com" target="_blank">
+                   <a href="http://www.carltechusa.com" target="_blank" class="prj-link">
                        <div class="full row clearfix">
                            <div class="module half col left">
                                <img src="img/carl.png">
@@ -235,7 +221,7 @@
                     <p>though this be madness,</p>
                     <p>yet there be method in it</p>
                 </section>
-                <section class="full grey content test">
+                <section class="full white content test">
                     <div class="three-q col">
                         <p>here is something.</p>
                     </div>
@@ -248,24 +234,40 @@
                     <hr class="divider">
                     <p>reach out to me for work, conversation, &|| beer</p>
                 </section>
-                <section class="full grey content test">
+                <section class="full grey content">
                     <div class="three-q col">
                         <div class="t-padded clearfix">
-                            <div class="third col left">
-                                <a href=""></a>
+                            <div class="half col left contact-option">
+                                <a href="#resume">
+                                    <object>
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="16.9 9.9 42.6 55.2" enable-background="new 16.9 9.9 42.6 55.2" xml:space="preserve">
+                                        <path class="contact-icon" fill="#CCCCCC" d="M50,9.9H16.9v55.2h42.5l0.1-46.7L50,9.9z M57.4,63.3H18.7V12h30.4v8.3h8.3L57.4,63.3L57.4,63.3z M44.2,21.9
+                                            H23.1v-1.3h21.1C44.2,20.7,44.2,21.9,44.2,21.9z M54,26.6h-31v-1.3h31V26.6z M36.4,31.3H23.1V30h13.3V31.3z M54,35.9h-31v-1.3h31
+                                            V35.9z M54,45.2h-31v-1.3h31V45.2z M54,49.9h-31v-1.3h31V49.9z M45.8,40.6H23.1v-1.3h22.7V40.6z M36.2,54.5H23.1v-1.3h13.2V54.5z"/>
+                                        </svg>
+
+                                    </object>
+                                </a>
                                 <hr>
-                                <h2>contact method</h2>
+                                <h2>resume</h2>
+                                <p></p>
                             </div>
-                            <div class="third col left">
-                                <a href=""></a>
+                            <div class="half col left contact-option">
+                                <a href="mailto:ellismarkf@gmail.com?Subject=Hey%20Mark,%20let's%20talk" class="" target="_blank">
+                                    <object>
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="0 0 100 61.5" enable-background="new 0 0 100 61.5" xml:space="preserve">
+                                        <path class="contact-icon" fill="#CCCCCC" d="M96.7,0H3.3C1.2,0,0,1.2,0,3.3v54.9c0,2,1.2,3.3,3.3,3.3h93.4c2,0,3.3-1.2,3.3-3.3V3.3
+                                            C100,1.2,98.8,0,96.7,0z M91.7,4.9L49.2,38.5L7.4,4.9H91.7z M93.4,56.6H6.6c-1,0-1.6-0.6-1.6-1.6V9.1l44.3,35.1L95.1,7.8v47.1
+                                            C95.1,55.9,94.5,56.6,93.4,56.6z"/>
+                                        </svg>
+                                    </object>
+                                </a>
                                 <hr>
-                                <h2>contact method</h2>
+                                <h2>email me</h2>
                             </div>
-                            <div class="third col left">
-                                <a href=""></a>
-                                <hr>
-                                <h2>contact method</h2>
-                            </div>
+
                         </div>
                     </div>
                 </section>
@@ -282,6 +284,7 @@
         var navDivClasses = navDiv.classList;
         var windowWidth = window.innerWidth;
         var windowWidth = window.innerWidth;
+        var colorEl = document.getElementsByClassName('color');
 
         if(windowWidth < 600 && navDivClasses.contains('half')){
             navDivClasses.remove('half');
@@ -369,73 +372,6 @@
             var pattern = t.generate(document.body.clientWidth, height());
             document.body.setAttribute('style', 'background-image: ' + pattern.dataUrl);
         };
-
-        var o = {
-            init: function(){
-                this.diagram();
-            },
-            random: function(l, u){
-                return Math.floor((Math.random()*(u-l+1))+l);
-            },
-            diagram: function(){
-                var r = Raphael('diagram'),
-                    rad = 25,
-                    defaultText = 'skills',
-                    speed = 250,
-                    cx = ($('#diagram').width()) / 2;
-                    y = ($('#diagram').height()) / 2;
-                    cy = y -50;
-                
-                r.circle(cx, cy, 30).attr({ stroke: 'none', fill: '#fff' });
-                
-                var title = r.text(cx, cy, defaultText).attr({
-                    font: '.8rem Helvetica Neue',
-                    "font-weight": '100',
-                    fill: '#aaa'
-                }).toFront();
-                
-                r.customAttributes.arc = function(value, color, rad){
-                    var v = 3.6*value,
-                        alpha = v == 360 ? 359.99 : v,
-                        random = o.random(91, 240),
-                        a = (random-alpha) * Math.PI/180,
-                        b = random * Math.PI/180,
-                        sx = cx + rad * Math.cos(b),
-                        sy = cy - rad * Math.sin(b),
-                        x = cx + rad * Math.cos(a),
-                        y = cy - rad * Math.sin(a),
-                        path = [['M', sx, sy], ['A', rad, rad, 0, +(alpha > 180), 1, x, y]];
-                    return { path: path, stroke: color }
-                }
-                
-                $('.get').find('.arc').each(function(i){
-                    var t = $(this), 
-                        color = t.find('.color').val(),
-                        value = t.find('.percent').val(),
-                        text = t.find('.text').text();
-                    
-                    rad += 17;  
-                    var z = r.path().attr({ arc: [value, color, rad], 'stroke-width': 9 });
-                    
-                    z.mouseover(function(){
-                        this.animate({ 'stroke-width': 15, opacity: .75 }, 1000, 'elastic');
-                        if(Raphael.type != 'VML') //solves IE problem
-                    this.toFront();
-
-                        title.stop().animate({ opacity: 0 }, speed, '>', function(){
-                            this.attr({ text: text + '\n' + value + '%' }).animate({ opacity: 1 }, speed, '<');
-                        });
-                    }).mouseout(function(){
-                        this.stop().animate({ 'stroke-width': 9, opacity: 1 }, speed*4, 'elastic');
-                        title.stop().animate({ opacity: 0 }, speed, '>', function(){
-                            title.attr({ text: defaultText }).animate({ opacity: 1 }, speed, '<');
-                        }); 
-                    });
-                });
-                
-            }
-        }
-        $(function(){ o.init(); });
 
 
     </script>
