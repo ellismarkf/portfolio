@@ -100,6 +100,10 @@ table {
 .half {
   width: 50%;
 }
+.fluid-half {
+  width: 50%;
+  float: left;
+}
 .two-thirds {
   width: 66.67777777777777%;
 }
@@ -207,10 +211,6 @@ margin: 0 0 5px 3px;
   display: inline-block;
   margin-top: 5px;
 }
-svg {
-  width: 22px;
-  margin-right: 3px;
-}
 svg .social {
   fill: #FFF;
   -webkit-transition: fill .5s;
@@ -219,24 +219,31 @@ svg .social {
 svg:hover .social {
   fill: #ccc;
 }
+svg .contact-icon {
+  -webkit-transition: fill .3s;
+}
+svg:hover .contact-icon {
+  fill: #aaa;
+}
 svg .transparent {
   fill: rgba(255, 255, 255, 0);
 }
 .side-note {
   position: absolute;
   right: 12px;
-  top: 30px;
+  top: 35px;
   text-decoration: none;
   color: #fff;
   font-family: "Garamond", serif, sans-serif;
   font-size: 3rem;
   cursor: pointer;
+  display: block;
 }
 .nav-box:last-child {
   border-right: 1px solid #ccc;
 }
 .nav-box {
-  color: #bbb;
+  color: rgb(150,150,150);
   /*background-color: white;*/
   font-size: 1.6rem;
   text-align: right;
@@ -261,7 +268,7 @@ svg .transparent {
   box-shadow: 0 2px 5px #ccc;
 }
 .content p, .container p, .container span {
-  color: #aaa;
+  color: rgb(100,100,100);
   line-height: 1.15rem;
 }
 .three-q p {
@@ -285,11 +292,17 @@ svg .transparent {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+.prj-link {
+  display: block;
+}
 .grey {
-  background-color: rgb(254,253,254);
+  background-color: rgb(252,252,254);
 }
 .grey h2 {
   color: #aaa;
+}
+.bottom-shadow {
+  box-shadow: 0px 0px 5px #aaa;
 }
 .menu {
   text-decoration: none;
@@ -311,6 +324,37 @@ section p {
   margin-bottom: 15px;
   box-shadow: 0 3px 10px black;
 }
+.contact-option {
+  padding: 20px;
+}
+.contact-option h2 {
+  text-align: center;
+}
+.content .contact-option hr {
+  width: 60%;
+  margin: 0px auto 40px;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.10), rgba(0,0,0,0));
+  background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.10), rgba(0,0,0,0));
+  background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.10), rgba(0,0,0,0));
+  background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.10), rgba(0,0,0,0));
+}
+.contact-option object {
+  display: block;
+  height: auto;
+  position: relative;
+  padding: 20%;
+  margin-bottom: 45px;
+}
+.resume {
+
+}
+.email {
+
+}
+.connect-box {
+  padding: 2%;
+  width: 47%;
+}
 .colophon {
   color: white;
   font-family: "Helvetica Neue", "pragmatica-web", sans-serif;
@@ -326,7 +370,14 @@ section p {
 .colophon a:hover {
   text-decoration: underline;
 }
-object {
+.side-note object {
+  width: 40px;
+  display: block;
+  height: auto;
+  position: relative;
+  padding-top: 100%;
+}
+.icons object {
   width: 22px;
   display: block;
   height: auto;
@@ -390,11 +441,40 @@ svg {
   height: 1px;
 }
 .row:hover p, .row:hover h2 {
-  color: #000;
+  color: rgb(100,100,100);
 }
 .row:hover img {
   opacity: 1;
 }
+#svg {
+  height: 300px;
+  width: 100%;
+  border: 1px solid #ccc;
+  position: relative;
+  left: 20%;
+}
+.get {
+    display:none;
+}
+ 
+#diagram {
+    position: relative;
+    height: 240px;
+    width: 240px;
+}
+.last {
+  margin-bottom: 30px;
+}
+.half .left .clear-grid, .third .left .clear-grid {
+  width: 100%;
+  float: none;
+}
+.me {
+  position: relative;
+  top: 3px;
+  max-width: 430px;
+}
+
 @media screen and (max-width: 768px) {
   a.logo h1 {
     font-size: 4rem;
@@ -411,28 +491,149 @@ svg {
     margin-right: 11px;
   }
   .icons {
-    position: relative;
+    position: absolute;
     left: 170px;
+    top: -33px;
   }
   .description {
     width: 100%;
   }
+  .content .contact-option hr {
+    margin-bottom: 20px;
+  }
+  .fluid-half {
+    width: 100%;
+    float: none;
+  }
+  #diagram {
+    margin-top: 40px;
+  }
+  .contact-option object {
+    margin-bottom: 20px;
+    padding: 40%;
+  }
+  .contact-option h2 {
+    font-size: 1.6rem;
+  }
+  .me {
+    max-width: 300px;
+    right: -30%;
+  }
 }
-#svg {
-  height: 300px;
-  width: 100%;
-  border: 1px solid #ccc;
-  position: relative;
-  left: 20%;
+@media screen and (max-width: 460px){
+  .me {
+    right: -15%;
+  }
 }
-.get {
-    display:none;
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
- 
-#diagram {
-    position: relative;
-    height: 300px;
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
-.last {
-  margin-bottom: 30px;
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+}
+.animated {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+@-webkit-keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+            transform: translate3d(0, -2000px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+            transform: translate3d(0, -2000px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.fadeInDownBig {
+  -webkit-animation-name: fadeInDownBig;
+          animation-name: fadeInDownBig;
+}
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+          animation-name: fadeInRight;
 }
