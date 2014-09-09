@@ -354,7 +354,6 @@
             if(windowWidth < 600 && navDivClasses.contains('half')){
                 navDivClasses.remove('half');
             }
-
         };
 
         function heightChange() {
@@ -373,6 +372,40 @@
             document.body.setAttribute('style', 'background-image: ' + pattern.dataUrl);
         };
 
+        function getOffsetRect(elem) {
+            // (1)
+            var box = elem.getBoundingClientRect()
+            
+            var body = document.body
+            var docElem = document.documentElement
+            
+            // (2)
+            var scrollTop = window.pageYOffset || docElem.scrollTop || body.scrollTop
+            var scrollLeft = window.pageXOffset || docElem.scrollLeft || body.scrollLeft
+            
+            // (3)
+            var clientTop = docElem.clientTop || body.clientTop || 0
+            var clientLeft = docElem.clientLeft || body.clientLeft || 0
+            
+            // (4)
+            var top  = box.top +  scrollTop - clientTop
+            var left = box.left + scrollLeft - clientLeft
+            
+            return { top: Math.round(top), left: Math.round(left) }
+        }
+
+        function checkScroll(elem){
+          var winHeight = window.scrollY;
+          console.log('window scroll: ', winHeight);
+          if(winHeight > ((getOffsetRect(elem).top)-26) && winHeight < ((getOffsetRect(elem).top)+50)) {
+            console.log('window scroll has reach method, trigger animation');
+          }
+        };
+
+        window.onscroll = function(){
+          var methodSection = document.getElementById('method');
+          checkScroll(methodSection);
+        }
 
     </script>
 </html>
