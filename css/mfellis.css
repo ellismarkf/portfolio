@@ -124,7 +124,7 @@ table {
 }
 .ghost {
   z-index: 100;
-  background-color: rgba(255,255,255,.5);
+  background-color: rgba(255,255,255,.6);
 }
 .nav-btn a {
   text-decoration: none;
@@ -407,7 +407,7 @@ svg {
 .description {
   position: relative;
   padding: 2rem 2% 2% 2%;
-  width: 50%;
+  width: 46%;
 }
 .description h2 {
   color: #aaa;
@@ -427,9 +427,6 @@ svg {
 .description p strong {
   font-size: .8rem;
   font-weight: 500;
-}
-.description:last-child {
-  margin-bottom: 20px;
 }
 .test {
   height: 400px;
