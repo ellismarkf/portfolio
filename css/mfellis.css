@@ -471,7 +471,13 @@ svg {
   top: 3px;
   max-width: 430px;
 }
-
+.process {
+  width: 100%;
+  display: block;
+  height: auto;
+  position: relative;
+  padding-top: 55%;
+}
 @media screen and (max-width: 768px) {
   a.logo h1 {
     font-size: 4rem;
@@ -520,6 +526,7 @@ svg {
 @media screen and (max-width: 460px){
   .me {
     right: -15%;
+    max-width: 250px;
   }
 }
 @-webkit-keyframes fadeIn {
@@ -574,7 +581,7 @@ svg {
   }
 
   100% {
-    opacity: 1;
+    opacity: .5;
     -webkit-transform: none;
             transform: none;
   }
@@ -592,7 +599,7 @@ svg {
   }
 
   100% {
-    opacity: 1;
+    opacity: .5;
     -webkit-transform: none;
             transform: none;
   }
@@ -633,4 +640,7 @@ svg {
 .fadeInRight {
   -webkit-animation-name: fadeInRight;
           animation-name: fadeInRight;
+}
+.bigCircle {
+  opacity: .5;
 }
