@@ -19,7 +19,7 @@
 
 ;(function($, window, document, undefined){
 
-	// our plugin constructor
+    // our plugin constructor
 	var OnePageNav = function(elem, options){
 		this.elem = elem;
 		this.$elem = $(elem);
@@ -199,7 +199,7 @@
 		},
 
 		scrollTo: function(target, callback) {
-			var offset = $(target).offset().top;
+			var offset = ($(target).offset().top) - 25;
 
 			$('html, body').animate({
 				scrollTop: offset
