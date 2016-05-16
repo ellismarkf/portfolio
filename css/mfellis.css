@@ -425,10 +425,6 @@ svg {
   -webkit-transition: color .4s;
   font-size: 1rem;
 }
-/*.description h2 + p {
-  border-top: 1px solid #ccc;
-  padding-top: 1rem;
-}*/
 .description p strong {
   font-size: .8rem;
   font-weight: 500;
